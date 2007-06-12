@@ -1,6 +1,6 @@
 %define rname emerald
 %define name %{rname}-themes
-%define version 0.2.0
+%define version 0.2.1
 %define release %mkrel 1
 
 Name:	 %name
