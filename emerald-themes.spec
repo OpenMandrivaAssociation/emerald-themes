@@ -2,10 +2,10 @@
 %define name emerald-themes
 %define version 0.3.0
 %define rel 1
-%define git 20070627
+%define git 20070801
 
 %if  %{git}
-%define srcname %{name}-%{version}-%{git}
+%define srcname %{name}-%{git}
 %define distname %{name}
 %define release %mkrel 0.%{git}.%{rel}
 %else
