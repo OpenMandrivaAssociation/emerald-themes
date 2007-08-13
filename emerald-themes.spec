@@ -1,8 +1,8 @@
 %define shortname emerald
 %define name emerald-themes
-%define version 0.3.0
+%define version 0.5.2
 %define rel 1
-%define git 20070801
+%define git 0
 
 %if  %{git}
 %define srcname %{name}-%{git}
