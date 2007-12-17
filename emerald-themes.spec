@@ -22,7 +22,6 @@ License: GPL
 Group:   System/X11
 URL: http://www.compiz-fusion.org/
 Source: %{srcname}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-build-root
 BuildArch: noarch
 
 %description
