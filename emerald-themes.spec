@@ -1,23 +1,11 @@
-%define git 20080210
-
-%if  %{git}
-%define srcname %{name}-%{git}
-%define distname %{name}
-%define rel 0.%{git}.4
-%else
-%define srcname %{name}-%{version}
-%define distname %{name}-%{version}
-%define rel 1
-%endif
-
 Name:		emerald-themes
-Version:	0.6.0
-Release:	%{rel}
+Version:	0.8.16
+Release:	1
 Summary:	Themes for the Emerald Window Decorator
 Group:		System/X11
 License:	GPLv2
-URL:		http://www.compiz-fusion.org/
-Source:		%{srcname}.tar.bz2
+URL:            https://github.com/compiz-reloaded/emerald-themes
+Source0:        https://github.com/compiz-reloaded/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
 Requires:	emerald
 BuildArch:	noarch
 
@@ -30,26 +18,18 @@ automatically once installed.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q -n %{distname}
+%autosetup -p1
 
 %build
-%if %{git}
-# This is a GIT snapshot, so we need to generate makefiles.
-  sh autogen.sh -V
-%endif
+NOCONFIGURE=1 ./autogen.sh
+%configure
 
-%configure2_5x
-%make
+%make_build
 
 %install
-
-%makeinstall_std
-
-chmod -R a+r %{buildroot}
-
-#----------------------------------------------------------------------------
+%make_install
 
 %files
-%dir %{_datadir}/emerald/themes
+%doc NEWS
+%license COPYING
 %{_datadir}/emerald/themes/*
-
