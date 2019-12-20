@@ -5,7 +5,7 @@ Summary:	Themes for the Emerald Window Decorator
 Group:		System/X11
 License:	GPLv2
 URL:            https://github.com/compiz-reloaded/emerald-themes
-Source0:        https://github.com/compiz-reloaded/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/compiz-reloaded/%{name}/archive/v%{version}/%{name}-%{version}.tar.bz2
 Requires:	emerald
 BuildArch:	noarch
 
