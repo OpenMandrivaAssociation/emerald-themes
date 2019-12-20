@@ -18,7 +18,7 @@ automatically once installed.
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 %{name}-v%{version}
+%setup -qn %{name}-v%{version}
 
 %build
 NOCONFIGURE=1 ./autogen.sh
